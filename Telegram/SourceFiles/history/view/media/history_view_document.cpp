@@ -1459,7 +1459,7 @@ bool Document::uploading() const {
 [[nodiscard]] int Document::thumbedLinkMaxWidth() const {
 	if (Has<HistoryDocumentThumbed>()) {
 		const auto w = [](const QString &text) {
-			return st::semiboldFont->width(text.toUpper());
+			return st::semiboldFont->width(text);
 		};
 		return std::max({
 			w(tr::lng_media_download(tr::now)),
@@ -1483,15 +1483,15 @@ void Document::setStatusSize(int64 newSize, TimeId realDuration) const {
 		realDuration);
 	if (auto thumbed = Get<HistoryDocumentThumbed>()) {
 		if (_statusSize == Ui::FileStatusSizeReady) {
-			thumbed->link = tr::lng_media_download(tr::now).toUpper();
+			thumbed->link = tr::lng_media_download(tr::now);
 		} else if (_statusSize == Ui::FileStatusSizeLoaded) {
-			thumbed->link = tr::lng_media_open_with(tr::now).toUpper();
+			thumbed->link = tr::lng_media_open_with(tr::now);
 		} else if (_statusSize == Ui::FileStatusSizeFailed) {
-			thumbed->link = tr::lng_media_download(tr::now).toUpper();
+			thumbed->link = tr::lng_media_download(tr::now);
 		} else if (_statusSize >= 0) {
-			thumbed->link = tr::lng_media_cancel(tr::now).toUpper();
+			thumbed->link = tr::lng_media_cancel(tr::now);
 		} else {
-			thumbed->link = tr::lng_media_open_with(tr::now).toUpper();
+			thumbed->link = tr::lng_media_open_with(tr::now);
 		}
 		thumbed->linkw = st::semiboldFont->width(thumbed->link);
 	}
