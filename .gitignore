@@ -61,9 +61,15 @@ settings.local.json
 .env.local
 .env.*.local
 
-# Cursor IDE local settings (but keep .cursor/rules/)
-.cursor/*
-!.cursor/rules/
+# Cursor IDE
+.cursor/
+.cursorignore
+
+# GitHub Actions (don't push)
+.github/
+
+# Antigravity agent workflows (don't push)
+.agents/
 
 # Project specific
 Telegram/SourceFiles/_other/packer_private.h

@@ -15,8 +15,8 @@ desktop_app_parse_version(Telegram/build/version)
 project(Telegram
     LANGUAGES C CXX
     VERSION ${desktop_app_version_cmake}
-    DESCRIPTION "AyuGram Desktop"
-    HOMEPAGE_URL "https://ayugram.one"
+    DESCRIPTION "Teleglow Desktop"
+    HOMEPAGE_URL "https://github.com/not1cyyy/Teleglow"
 )
 
 if (APPLE)

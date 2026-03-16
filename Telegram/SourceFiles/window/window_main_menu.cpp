@@ -381,8 +381,8 @@ MainMenu::MainMenu(
 	parentResized();
 
 	_telegram->setMarkedText(tr::link(
-		u"AyuGram Desktop"_q,
-		u"https://ayugram.one"_q));
+		u"Teleglow Desktop"_q,
+		u"https://github.com/not1cyyy/Teleglow"_q));
 	_telegram->setLinksTrusted();
 	_version->setMarkedText(
 		tr::link(
