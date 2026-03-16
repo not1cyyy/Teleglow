@@ -16,11 +16,11 @@
 #include "settings_chats.h"
 #include "settings_filters.h"
 #include "settings_general.h"
-#include "settings_other.h"
+
+
 
 #include "ayu/ayu_settings.h"
 #include "ayu/ui/ayu_logo.h"
-#include "core/version.h"
 #include "settings/settings_common.h"
 #include "styles/style_ayu_settings.h"
 #include "styles/style_layers.h"
@@ -92,7 +92,6 @@ void SetupCategories(
 		{tr::ayu_CategoryGeneral(tr::now), &st::menuIconShowAll, [=] { showOther(AyuGeneral::Id()); }},
 		{tr::ayu_CategoryAppearance(tr::now), &st::menuIconPalette, [=] { showOther(AyuAppearance::Id()); }},
 		{tr::ayu_CategoryChats(tr::now), &st::menuIconChatBubble, [=] { showOther(AyuChats::Id()); }},
-		{tr::ayu_CategoryOther(tr::now), &st::menuIconFave, [=] { showOther(AyuOther::Id()); }},
 	};
 
 	for (const auto &category : categories) {
@@ -172,7 +171,7 @@ void AyuMain::setupContent(not_null<Window::SessionController*> controller) {
 	content->add(
 		object_ptr<Ui::FlatLabel>(
 			content,
-			rpl::single(QString("Teleglow Desktop v") + QString::fromLatin1(AppVersionStr)),
+			rpl::single(QString("Teleglow Desktop v0.3.0")),
 			st::boxTitle),
 		style::al_top);
 
