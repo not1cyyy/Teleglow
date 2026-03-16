@@ -65,7 +65,7 @@ constexpr auto regDateBotId = 8083294286L;
 const auto regDateBotUsername = QString("exteraAuthBot");
 
 constexpr auto regDateBotFallbackId = 6247153446L;
-const auto regDateBotFallbackUsername = QString("ayugrambot");
+const auto regDateBotFallbackUsername = QString("teleglowbot");
 
 }
 
