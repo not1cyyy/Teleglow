@@ -57,22 +57,22 @@ void SetupAppLogo(not_null<Ui::VerticalLayout*> container) {
 
 	logo->paintRequest(
 	) | rpl::on_next([=](QRect clip)
-							 {
-								 auto p = QPainter(logo);
-								 const auto image = AyuAssets::currentAppLogoPad();
-								 if (!image.isNull()) {
-									 const auto size = st::settingsCloudPasswordIconSize;
-									 const auto scaled = image.scaled(
-										 size * style::DevicePixelRatio(),
-										 size * style::DevicePixelRatio(),
-										 Qt::KeepAspectRatio,
-										 Qt::SmoothTransformation);
-									 p.drawImage(
-										 QRect(0, 0, size, size),
-										 scaled);
-								 }
-							 },
-							 logo->lifetime());
+						 {
+							 auto p = QPainter(logo);
+							 const auto image = AyuAssets::currentAppLogoPad();
+							 if (!image.isNull()) {
+								 const auto size = st::settingsCloudPasswordIconSize;
+								 const auto scaled = image.scaled(
+									 size * style::DevicePixelRatio(),
+									 size * style::DevicePixelRatio(),
+									 Qt::KeepAspectRatio,
+									 Qt::SmoothTransformation);
+								 p.drawImage(
+									 QRect(0, 0, size, size),
+									 scaled);
+							 }
+						 },
+						 logo->lifetime());
 }
 
 void SetupCategories(
@@ -87,7 +87,7 @@ void SetupCategories(
 	};
 
 	const auto categories = std::vector<CategoryInfo>{
-		{QString("AyuGram"), &st::menuIconGroupReactions, [=] { showOther(AyuGhost::Id()); }},
+		{QString("Teleglow"), &st::menuIconGroupReactions, [=] { showOther(AyuGhost::Id()); }},
 		{asBeta(tr::ayu_CategoryFilters(tr::now)), &st::menuIconTagFilter, [=] { showOther(AyuFilters::Id()); }},
 		{tr::ayu_CategoryGeneral(tr::now), &st::menuIconShowAll, [=] { showOther(AyuGeneral::Id()); }},
 		{tr::ayu_CategoryAppearance(tr::now), &st::menuIconPalette, [=] { showOther(AyuAppearance::Id()); }},
@@ -123,43 +123,30 @@ void SetupLinks(
 
 	const auto links = std::vector<LinkInfo>{
 		{
-			tr::ayu_LinksChannel(tr::now),
-			QString("@ayugram"),
+			QString("Ko-fi"),
+			QString("ko-fi.com"),
 			&st::menuIconChannel,
 			[=]
 			{
-				controller->showPeerByLink(Window::PeerByLinkInfo{
-					.usernameOrId = QString("ayugram"),
-				});
+				QDesktopServices::openUrl(QString("https://ko-fi.com/"));
 			}
 		},
 		{
-			tr::ayu_LinksChats(tr::now),
-			QString("@ayugramchat"),
+			QString("Discord"),
+			QString("discord.gg"),
 			&st::menuIconChats,
 			[=]
 			{
-				controller->showPeerByLink(Window::PeerByLinkInfo{
-					.usernameOrId = QString("ayugramchat"),
-				});
+				QDesktopServices::openUrl(QString("https://discord.com/"));
 			}
 		},
 		{
-			tr::ayu_LinksTranslate(tr::now),
-			QString("Crowdin"),
-			&st::menuIconTranslate,
+			QString("Telegram"),
+			QString("@teleglow"),
+			&st::menuIconChannel,
 			[=]
 			{
-				QDesktopServices::openUrl(QString("https://translate.ayugram.one"));
-			}
-		},
-		{
-			tr::ayu_LinksDocumentation(tr::now),
-			QString("docs.ayugram.one"),
-			&st::menuIconIpAddress,
-			[=]
-			{
-				QDesktopServices::openUrl(QString("https://docs.ayugram.one"));
+				QDesktopServices::openUrl(QString("https://t.me/teleglow"));
 			}
 		},
 	};
@@ -185,7 +172,7 @@ void AyuMain::setupContent(not_null<Window::SessionController*> controller) {
 	content->add(
 		object_ptr<Ui::FlatLabel>(
 			content,
-			rpl::single(QString("AyuGram Desktop v") + QString::fromLatin1(AppVersionStr)),
+			rpl::single(QString("Teleglow Desktop v") + QString::fromLatin1(AppVersionStr)),
 			st::boxTitle),
 		style::al_top);
 
