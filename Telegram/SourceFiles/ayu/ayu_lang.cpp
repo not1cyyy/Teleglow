@@ -180,6 +180,7 @@ void AyuLanguage::applyLanguageJson(QJsonDocument doc) {
 	static const QSet<QString> skipKeys = {
 		"AyuPreferences",
 		"AyuSettingsDescription",
+		"IntroAbout",
 	};
 
 	const auto json = doc.object();
