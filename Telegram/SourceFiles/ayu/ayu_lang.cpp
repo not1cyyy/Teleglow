@@ -176,8 +176,18 @@ void AyuLanguage::fetchError(QNetworkReply::NetworkError e) {
 }
 
 void AyuLanguage::applyLanguageJson(QJsonDocument doc) {
+	// Keys whose remote values must NOT overwrite Teleglow's rebranding.
+	static const QSet<QString> skipKeys = {
+		"AyuPreferences",
+		"AyuSettingsDescription",
+	};
+
 	const auto json = doc.object();
 	for (const QString &brokenKey : json.keys()) {
+		if (skipKeys.contains(brokenKey)) {
+			continue;
+		}
+
 		auto key = qsl("ayu_") + brokenKey;
 		auto val = json.value(brokenKey).toString().replace(qsl("&amp;"), qsl("&"));
 
@@ -211,3 +221,4 @@ void AyuLanguage::applyLanguageJson(QJsonDocument doc) {
 	}
 	Lang::GetInstance().updatePluralRules();
 }
+
