@@ -53,10 +53,10 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Radolyn Labs"
             VALUE "FileDescription", "Teleglow Desktop Updater"
-            VALUE "FileVersion", "6.3.10.0"
+            VALUE "FileVersion", "0.3.0.0"
             VALUE "LegalCopyright", "Copyright (C) 2014-2025"
             VALUE "ProductName", "Teleglow Desktop"
-            VALUE "ProductVersion", "6.3.10.0"
+            VALUE "ProductVersion", "0.3.0.0"
         END
     END
     BLOCK "VarFileInfo"
