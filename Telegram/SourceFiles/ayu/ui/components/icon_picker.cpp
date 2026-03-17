@@ -32,7 +32,7 @@ const QVector<QString> icons{
 	AyuAssets::WIN95_ICON,
 	AyuAssets::CHIBI_ICON,
 	AyuAssets::CHIBI2_ICON,
-	AyuAssets::EXTERA2_ICON,
+	AyuAssets::MATERIALGRAM_ICON,
 };
 std::unordered_map<QString, QImage> cachedIcons;
 

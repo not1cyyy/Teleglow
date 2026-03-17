@@ -14,8 +14,8 @@
         <file alias="art/ayu/discord/app_icon.ico">../../art/ayu/discord/app_icon.ico</file>
         <file alias="art/ayu/extera/app.svg">../../art/ayu/extera/app.svg</file>
         <file alias="art/ayu/extera/app_icon.ico">../../art/ayu/extera/app_icon.ico</file>
-        <file alias="art/ayu/extera2/app.svg">../../art/ayu/extera2/app.svg</file>
-        <file alias="art/ayu/extera2/app_icon.ico">../../art/ayu/extera2/app_icon.ico</file>
+        <file alias="art/ayu/materialgram/app.png">../../art/ayu/materialgram/app.png</file>
+        <file alias="art/ayu/materialgram/app_icon.ico">../../art/ayu/materialgram/app_icon.ico</file>
         <file alias="art/ayu/nothing/app.svg">../../art/ayu/nothing/app.svg</file>
         <file alias="art/ayu/nothing/app_icon.ico">../../art/ayu/nothing/app_icon.ico</file>
         <file alias="art/ayu/spotify/app.svg">../../art/ayu/spotify/app.svg</file>
