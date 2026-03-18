@@ -178,8 +178,17 @@ style::colorizer ColorizerForTheme(const QString &absolutePath) {
 		return {};
 	}
 	const auto &colors = Core::App().settings().themesAccentColors();
-	if (const auto accent = AyuFeatures::MessageShot::isChoosingTheme() ? AyuFeatures::MessageShot::getSelectedColorFromDefault() : colors.get(i->type)) {
-		return ColorizerFrom(*i, *accent);
+	const auto messageShot = AyuFeatures::MessageShot::isChoosingTheme()
+		? AyuFeatures::MessageShot::getSelectedColorFromDefault()
+		: std::optional<QColor>();
+	const auto customAccent = messageShot ? messageShot : colors.get(i->type);
+	if (customAccent) {
+		return ColorizerFrom(*i, *customAccent);
+	}
+	// For Google Day/Dark themes: apply blue accent by default
+	// since the theme files have green accents baked in
+	if (i->type == EmbeddedType::DayBlue || i->type == EmbeddedType::Night) {
+		return ColorizerFrom(*i, style::ColorFromHex("40a7e3"));
 	}
 	return {};
 }
@@ -216,7 +225,7 @@ std::vector<EmbeddedScheme> EmbeddedThemes() {
 			qColor("40a7e3"),
 			name(tr::lng_settings_theme_day),
 			":/gui/Google Day.tdesktop-theme",
-			qColor("40a7e3")
+			qColor("b9cf7a")
 		},
 		EmbeddedScheme{
 			EmbeddedType::Night,
@@ -227,7 +236,7 @@ std::vector<EmbeddedScheme> EmbeddedThemes() {
 			qColor("40a7e3"),
 			name(tr::lng_settings_theme_tinted),
 			":/gui/Google Dark.tdesktop-theme",
-			qColor("40a7e3")
+			qColor("b9cf7a")
 		},
 		EmbeddedScheme{
 			EmbeddedType::Default,
