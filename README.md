@@ -1,41 +1,65 @@
 # Teleglow
 
-Teleglow is a custom fork of Telegram Desktop that combines the powerful features of AyuGram with the beautiful Material Design aesthetics of MaterialGram.
+Teleglow is a fork of [AyuGram Desktop](https://github.com/AyuGram/AyuGramDesktop) with [MaterialGram](https://github.com/kukuruzka165/materialgram) aesthetics applied. It keeps all of AyuGram's privacy and utility features while replacing the default visual style with a cleaner Material Design look.
+
+## Screenshots
+
+![Light Theme](docs/screenshots/light-theme.png)
+
+![Dark Theme](docs/screenshots/dark-theme.png)
 
 ## Features
 
-* Full ghost mode (flexible)
-* Messages history
-* Anti-recall
-* Font customization
-* Streamer mode
-* Local Telegram Premium
-* Translator
-* Media preview and quick reaction on force click (macOS)
-* Enhanced appearance with Material Design aesthetics
-* Custom Google Day and Google Dark themes by default
-* Clean lowercase button styling
+### From AyuGram
+- Ghost mode with flexible read receipts control
+- Message history (view deleted and edited messages)
+- Anti-recall protection
+- Local Telegram Premium features
+- Streamer mode
+- Font customization
+- Built-in message translator
+
+### Visual changes from MaterialGram
+- Google Day and Google Dark themes as the default light and dark themes
+- Blue accent color by default across the UI
+- Lowercase button labels throughout the interface
+- Material Design icon set
+
+### Teleglow additions
+- Custom app icon picker in Teleglow Preferences with additional icon options including MaterialGram
+- Version numbering independent of upstream Telegram Desktop
+
+## Requirements
+
+- Windows 10 or later (x64)
+
+## Installation
+
+Download the installer from the [Releases](https://github.com/not1cyyy/Teleglow/releases) page and run it. No administrator privileges are required.
+
+## Building from source
+
+See [docs/building-win-x64.md](docs/building-win-x64.md) for Windows build instructions.
 
 ## Credits
 
-### Base Projects
+### Base projects
 
-- AyuGram: https://github.com/AyuGram/AyuGramDesktop
-- MaterialGram: https://github.com/kukuruzka165/materialgram
+- [AyuGram Desktop](https://github.com/AyuGram/AyuGramDesktop) by Radolyn Labs
+- [MaterialGram](https://github.com/kukuruzka165/materialgram) by kukuruzka165
+- [Telegram Desktop](https://github.com/telegramdesktop/tdesktop) by Telegram
 
-### Telegram clients
+### Other Telegram clients referenced
 
-- [Telegram Desktop](https://github.com/telegramdesktop/tdesktop)
 - [Kotatogram](https://github.com/kotatogram/kotatogram-desktop)
 - [64Gram](https://github.com/TDesktop-x64/tdesktop)
 - [Forkgram](https://github.com/forkgram/tdesktop)
 
-### Libraries used
+### Libraries
 
 - [JSON for Modern C++](https://github.com/nlohmann/json)
 - [SQLite](https://github.com/sqlite/sqlite)
 - [sqlite_orm](https://github.com/fnc12/sqlite_orm)
-- [androidx sources](https://github.com/androidx/androidx)
 
 ### Icons
 
@@ -44,3 +68,7 @@ Teleglow is a custom fork of Telegram Desktop that combines the powerful feature
 ### Bots
 
 - [TelegramDB](https://t.me/tgdatabase) for username lookup by ID
+
+## License
+
+This project is licensed under the same terms as Telegram Desktop. See the [LICENSE](LICENSE) file for details.
