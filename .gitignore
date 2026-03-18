@@ -75,3 +75,4 @@ settings.local.json
 Telegram/SourceFiles/_other/packer_private.h
 
 VERSION_HOWTO.md
+BUILD_INSTALLER.md
