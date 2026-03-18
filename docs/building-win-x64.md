@@ -22,7 +22,7 @@ All commands (if not stated otherwise) will be launched from **x64 Native Tools 
 
 Open **x64 Native Tools Command Prompt for VS 2022.bat**, go to ***BuildPath*** and run
 
-    git clone --recursive https://github.com/AyuGram/AyuGramDesktop.git tdesktop
+    git clone --recursive https://github.com/not1cyyy/Teleglow.git tdesktop
     tdesktop\Telegram\build\prepare\win.bat
 
 You may encounter an error saying that your IP is not allowed - simply turn on VPN.
@@ -35,4 +35,4 @@ Go to ***BuildPath*\\tdesktop\\Telegram** and run
 
 * Open ***BuildPath*\\tdesktop\\out\\Telegram.sln** in Visual Studio 2022
 * Select Telegram project and press Build > Build Telegram (Debug and Release configurations)
-* The result AyuGram.exe will be located in **D:\TBuild\tdesktop\out\Debug** (and **Release**)
+* The result Teleglow.exe will be located in **D:\TBuild\tdesktop\out\Debug** (and **Release**)
