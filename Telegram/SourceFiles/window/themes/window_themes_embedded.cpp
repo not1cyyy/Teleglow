@@ -181,6 +181,10 @@ style::colorizer ColorizerForTheme(const QString &absolutePath) {
 	if (const auto accent = AyuFeatures::MessageShot::isChoosingTheme() ? AyuFeatures::MessageShot::getSelectedColorFromDefault() : colors.get(i->type)) {
 		return ColorizerFrom(*i, *accent);
 	}
+	// Default to blue accent for Google Day/Dark themes (which have green baked in)
+	if (i->type == EmbeddedType::DayBlue || i->type == EmbeddedType::Night) {
+		return ColorizerFrom(*i, style::ColorFromHex("40a7e3"));
+	}
 	return {};
 }
 
