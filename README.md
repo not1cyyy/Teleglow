@@ -9,8 +9,6 @@ Teleglow is a fork of [AyuGram Desktop](https://github.com/AyuGram/AyuGramDeskto
 ![Dark Theme](docs/screenshots/dark-theme.png)
 
 ## Features
-
-### From AyuGram
 - Ghost mode with flexible read receipts control
 - Message history (view deleted and edited messages)
 - Anti-recall protection
@@ -18,14 +16,10 @@ Teleglow is a fork of [AyuGram Desktop](https://github.com/AyuGram/AyuGramDeskto
 - Streamer mode
 - Font customization
 - Built-in message translator
-
-### Visual changes from MaterialGram
 - Google Day and Google Dark themes as the default light and dark themes
 - Blue accent color by default across the UI
 - Lowercase button labels throughout the interface
 - Material Design icon set
-
-### Teleglow additions
 - Custom app icon picker in Teleglow Preferences with additional icon options including MaterialGram
 - Version numbering independent of upstream Telegram Desktop
 
