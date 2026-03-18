@@ -209,25 +209,25 @@ std::vector<EmbeddedScheme> EmbeddedThemes() {
 	return {
 		EmbeddedScheme{
 			EmbeddedType::DayBlue,
-			qColor("d6e2ee"),
-			qColor("d6e2ee"),
-			qColor("e8ecf0"),
-			qColor("e8ecf0"),
+			qColor("fffcf5"),
+			qColor("c5dfe7"),
+			qColor("f3f3e7"),
+			qColor("f3f3e7"),
 			qColor("40a7e3"),
 			name(tr::lng_settings_theme_day),
-			":/gui/day-blue.tdesktop-theme",
+			":/gui/Google Day.tdesktop-theme",
 			qColor("40a7e3")
 		},
 		EmbeddedScheme{
 			EmbeddedType::Night,
-			qColor("485761"),
-			qColor("6b808d"),
-			qColor("6b808d"),
-			qColor("6b808d"),
-			qColor("75bfb5"),
+			qColor("1b1c17"),
+			qColor("35495c"),
+			qColor("30312b"),
+			qColor("30312b"),
+			qColor("40a7e3"),
 			name(tr::lng_settings_theme_tinted),
-			":/gui/night.tdesktop-theme",
-			qColor("3fc1b0")
+			":/gui/Google Dark.tdesktop-theme",
+			qColor("40a7e3")
 		},
 		EmbeddedScheme{
 			EmbeddedType::Default,
